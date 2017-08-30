@@ -37,4 +37,4 @@ EOF
 
 MESSAGE="Time: ${DIFF}"
 
-ssh copperhead "notify-send \"Rendering completed\" \"${MESSAGE}\""
+ssh copperhead "notify-send -t 28800000 \"Rendering completed\" \"${MESSAGE}\""

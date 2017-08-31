@@ -19,7 +19,7 @@ time /usr/bin/blender \
   --render-format PNG \
   --frame-start 0 \
   --frame-end 6300 \
-  --frame-jump 30 \
+  --frame-jump 1 \
   --render-anim 2>&1 | tee "${LOG_FILE}"
 
 TIME_END=`date "+%Y-%m-%dT%H:%M:%S"`

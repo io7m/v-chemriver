@@ -4,6 +4,8 @@ TIME_START=`date "+%Y-%m-%dT%H:%M:%S"`
 OUTPUT="$HOME/var/render/chemriver/"
 LOG_FILE="${OUTPUT}/"`date "+%Y%m%dT%H%M%S.log"`
 
+mkdir -p "${OUTPUT}" || exit 1
+
 (
 cat <<EOF
 Rendering chemriver started ${TIME_START}
@@ -15,6 +17,7 @@ EOF
 time /usr/bin/blender \
   --background \
   chemriver.blend \
+  --scene main \
   --render-output "${OUTPUT}" \
   --render-format PNG \
   --frame-start 0 \
